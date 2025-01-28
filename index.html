@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>TIC TAC TOE</title>
+    <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ahon Basu">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="tic_box">
+      
+      <button></button>
+      <button></button>
+      <button></button>
+      <button></button>
+      <button></button>
+      <button></button>
+      <button></button>
+      <button></button>
+      <button></button>
+      
+    </div>
+    <div class="btn_box">
+      <label onclick="restart()">restart Game</label>
+    </div>
+    <div class="ox msg">
+      <img src="close.png" class="close">
+      <h2>Congraculation</h2>
+      <p class="txt">Winner is <span>player O</span> </p>
+      <label onclick="new_game()">New Game</label>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      let label = document.querySelectorAll("label");
+      
+      function restart() {
+        for (var btn of box) {
+          btn.disabled = false;
+          btn.innerText = "";
+        }
+      }
+      function new_game() {
+        msg.style.visibility = "hidden";
+        for (var btn of box) {
+          btn.disabled = false;
+          btn.innerText = "";
+        }
+        playerO = true;
+      }
+    </script>
+  </body>
+</html>
